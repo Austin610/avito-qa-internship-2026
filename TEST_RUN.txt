@@ -1,0 +1,53 @@
+test_TC01_registration (test_api.ApiTests.test_TC01_registration) ... ok
+test_TC02_duplicate_registration (test_api.ApiTests.test_TC02_duplicate_registration) ... ok
+test_TC03_authorization (test_api.ApiTests.test_TC03_authorization) ... ok
+test_TC04_wrong_password (test_api.ApiTests.test_TC04_wrong_password) ... ok
+test_TC05_unknown_user (test_api.ApiTests.test_TC05_unknown_user) ... ok
+test_TC06_password_empty (test_api.ApiTests.test_TC06_password_empty) ... ok
+test_TC06_password_missing (test_api.ApiTests.test_TC06_password_missing) ... ok
+test_TC06_username_empty (test_api.ApiTests.test_TC06_username_empty) ... ok
+test_TC06_username_missing (test_api.ApiTests.test_TC06_username_missing) ... ok
+test_TC07_password_empty (test_api.ApiTests.test_TC07_password_empty) ... ok
+test_TC07_password_missing (test_api.ApiTests.test_TC07_password_missing) ... ok
+test_TC07_username_empty (test_api.ApiTests.test_TC07_username_empty) ... ok
+test_TC07_username_missing (test_api.ApiTests.test_TC07_username_missing) ... ok
+test_TC08_create_read (test_api.ApiTests.test_TC08_create_read) ... ok
+test_TC09_empty_seller (test_api.ApiTests.test_TC09_empty_seller) ... ok
+test_TC10_seller_list (test_api.ApiTests.test_TC10_seller_list) ... ok
+test_TC11_duplicate_payload_unique_ids (test_api.ApiTests.test_TC11_duplicate_payload_unique_ids) ... ok
+test_TC12_statistics_v1 (test_api.ApiTests.test_TC12_statistics_v1) ... ok
+test_TC13_statistics_v2 (test_api.ApiTests.test_TC13_statistics_v2) ... ok
+test_TC14_delete (test_api.ApiTests.test_TC14_delete) ... ok
+test_TC15_repeat_delete (test_api.ApiTests.test_TC15_repeat_delete) ... ok
+test_TC16_unknown_item (test_api.ApiTests.test_TC16_unknown_item) ... ok
+test_TC16_unknown_stats_v1 (test_api.ApiTests.test_TC16_unknown_stats_v1) ... ok
+test_TC16_unknown_stats_v2 (test_api.ApiTests.test_TC16_unknown_stats_v2) ... ok
+test_TC17_missing_auth_create (test_api.ApiTests.test_TC17_missing_auth_create) ... ok
+test_TC17_missing_auth_delete (test_api.ApiTests.test_TC17_missing_auth_delete) ... ok
+test_TC17_missing_auth_read (test_api.ApiTests.test_TC17_missing_auth_read) ... ok
+test_TC17_missing_auth_seller (test_api.ApiTests.test_TC17_missing_auth_seller) ... ok
+test_TC17_missing_auth_stats_v1 (test_api.ApiTests.test_TC17_missing_auth_stats_v1) ... ok
+test_TC17_missing_auth_stats_v2 (test_api.ApiTests.test_TC17_missing_auth_stats_v2) ... ok
+test_TC18_unicode_roundtrip (test_api.ApiTests.test_TC18_unicode_roundtrip) ... ok
+test_TC19_minimum_positive_price (test_api.ApiTests.test_TC19_minimum_positive_price) ... ok
+test_TC20_zero_statistics (test_api.ApiTests.test_TC20_zero_statistics) ... FAIL
+test_TC21_e2e (test_api.ApiTests.test_TC21_e2e) ... ok
+
+======================================================================
+FAIL: test_TC20_zero_statistics (test_api.ApiTests.test_TC20_zero_statistics)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Neuton\qa-trainee-assignment-autumn-2026-flow-2-austin610-78d30a41\test_api.py", line 205, in test_TC20_zero_statistics
+    item_id = self.create(payload)
+  File "C:\Users\Neuton\qa-trainee-assignment-autumn-2026-flow-2-austin610-78d30a41\test_api.py", line 82, in create
+    self.expect_status(response, 200)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\Neuton\qa-trainee-assignment-autumn-2026-flow-2-austin610-78d30a41\test_api.py", line 43, in expect_status
+    self.assertEqual(response.status, expected, f"Expected HTTP {expected}, got {response.status}")
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 400 != 200 : Expected HTTP 200, got 400
+
+----------------------------------------------------------------------
+Ran 34 tests in 162.970s
+
+FAILED (failures=1)
